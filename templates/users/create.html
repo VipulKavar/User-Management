@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-12">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h2 class="card-title">Add New User</h2>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary btn-lg" form="user_create_form" type="submit">Save</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <form class="form-sample" id="user_create_form" method="post">
+                        {% csrf_token %}
+                        <p class="card-description"> Personal info </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">First Name</label>
+                                    <div class="col-sm-9">
+                                        {{ form.first_name }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Last Name</label>
+                                    <div class="col-sm-9">
+                                        {{ form.last_name }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Username</label>
+                                    <div class="col-sm-9">
+                                        {{ form.username }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Email</label>
+                                    <div class="col-sm-9">
+                                        {{ form.email }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Password</label>
+                                    <div class="col-sm-9">
+                                        {{ form.password }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">User Type</label>
+                                    <div class="col-sm-9">
+                                        {{ form.user_type }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="card-description"> Address </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">City</label>
+                                    <div class="col-sm-9">
+                                        {{ form.city }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
