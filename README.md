@@ -18,7 +18,7 @@ Customer:
 1. Python - 3.10
 2. Django - 4.1.6
 3. Postgresql - 15.0
-4. Template - 'Corona' from themewagon.
+4. Template - 'Corona' by Bootstrap Dash.
 
 # Features
 1. Crispy Forms
